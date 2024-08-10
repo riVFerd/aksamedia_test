@@ -1,4 +1,5 @@
 import 'package:aksamedia_test/presentation/router/app_router.dart';
+import 'package:aksamedia_test/presentation/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -8,9 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue
-      ),
+      theme: theme,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }

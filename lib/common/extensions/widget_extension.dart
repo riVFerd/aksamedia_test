@@ -17,4 +17,11 @@ extension WidgetExtension on Widget {
     height: h,
     child: this,
   );
+
+  Expanded expand({int flex = 1}) => Expanded(
+    flex: flex,
+    child: this,
+  );
+
+  SafeArea safeArea() => SafeArea(child: this);
 }
