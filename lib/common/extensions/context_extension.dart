@@ -9,6 +9,10 @@ extension ContextExtension on BuildContext {
     Navigator.of(this).pushNamed(routeName);
   }
 
+  void pop() {
+    Navigator.of(this).pop();
+  }
+
   Size get size => MediaQuery.of(this).size;
 
   double get width => MediaQuery.of(this).size.width;
