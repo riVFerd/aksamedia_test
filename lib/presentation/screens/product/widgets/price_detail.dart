@@ -66,7 +66,7 @@ class PriceDetail extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(vertical: 7),
           decoration: const BoxDecoration(
-            color: ColorTheme.yellow,
+            color: ColorTheme.secondary500,
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(10)),
           ),
           child: Text.rich(

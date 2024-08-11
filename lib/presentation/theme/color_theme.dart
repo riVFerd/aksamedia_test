@@ -8,6 +8,6 @@ class ColorTheme {
   static const primary950 = Color(0xFF242626);
   static const gray700 = Color(0xFF4A4E5A);
   static const info500 = Color(0xFF0EA5E9);
-  static const yellow = Color(0xFFECE806);
+  static const secondary500 = Color(0xFFECE806);
   static const success600 = Color(0xFF16A34A);
 }

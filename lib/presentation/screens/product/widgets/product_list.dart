@@ -19,9 +19,24 @@ class ProductList extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           separatorBuilder: (_, __) => const SizedBox(width: 20),
           itemBuilder: (_, index) {
-            return const ProductCard();
+            return ProductCard(
+              isNew: index % 2 != 0,
+            );
           },
-        ).sized(h: 256),
+        ).sized(h: 300),
+
+        Text('Produk Serupa', style: TextStyleTheme.regular),
+        const SizedBox(height: 16),
+        ListView.separated(
+          itemCount: 4,
+          scrollDirection: Axis.horizontal,
+          separatorBuilder: (_, __) => const SizedBox(width: 20),
+          itemBuilder: (_, index) {
+            return ProductCard(
+              isNew: index % 2 == 0,
+            );
+          },
+        ).sized(h: 300),
       ],
     );
   }

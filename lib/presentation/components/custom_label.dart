@@ -8,28 +8,35 @@ class CustomLabel extends StatelessWidget {
     super.key,
     required this.label,
     required this.text,
-    this.bgColor = ColorTheme.yellow,
+    this.bgColor = ColorTheme.secondary500,
+    this.labelStyle,
+    this.textStyle,
   });
 
   final String label;
   final String text;
   final Color bgColor;
+  final TextStyle? labelStyle;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
-    return Chip(
-      side: BorderSide.none,
-      backgroundColor: bgColor,
-      label: Text.rich(
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Text.rich(
         TextSpan(
           text: '$label ',
-          style: TextStyleTheme.regular.copyWith(
+          style: labelStyle ?? TextStyleTheme.regular.copyWith(
             fontWeight: FontWeight.w700,
           ),
           children: [
             TextSpan(
                 text: text,
-                style: TextStyleTheme.small
+                style: textStyle ?? TextStyleTheme.small
             ),
           ],
         ),

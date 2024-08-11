@@ -39,16 +39,16 @@ class ProductScreen extends StatelessWidget {
         ],
       ),
       extendBodyBehindAppBar: true,
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
           children: [
-            const ProductBanner(),
+            ProductBanner(),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18),
+              padding: EdgeInsets.symmetric(horizontal: 18),
               child: Column(
                 children: [
                   PriceDetail(),
-                  const SizedBox(height: 18),
+                  SizedBox(height: 18),
                   ProductOption(),
                   ProductDescription(),
                   Align(
@@ -57,6 +57,26 @@ class ProductScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+        decoration: BoxDecoration(),
+        child: Row(
+          children: [
+            OutlinedButton(
+              onPressed: () {},
+              child: Text(
+                'Beli Sekarang',
+                style: TextStyleTheme.small,
+              ),
+            ).expand(),
+            const SizedBox(width: 10),
+            FilledButton(
+              onPressed: () {},
+              child: SvgPicture.asset('assets/icons/cart.svg', height: 20, width: 20),
             ),
           ],
         ),

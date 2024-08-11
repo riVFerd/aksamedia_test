@@ -11,4 +11,14 @@ final theme = ThemeData(
       ),
     ),
   ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: OutlinedButton.styleFrom(
+      backgroundColor: Colors.white,
+      side: const BorderSide(color: ColorTheme.primary950),
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
+  ),
 );
