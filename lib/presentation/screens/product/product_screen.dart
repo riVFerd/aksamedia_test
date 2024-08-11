@@ -39,6 +39,7 @@ class ProductScreen extends StatelessWidget {
         ],
       ),
       extendBodyBehindAppBar: true,
+      backgroundColor: Colors.white,
       body: const SingleChildScrollView(
         child: Column(
           children: [
@@ -62,8 +63,8 @@ class ProductScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
+        color: Colors.white,
         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-        decoration: BoxDecoration(),
         child: Row(
           children: [
             OutlinedButton(

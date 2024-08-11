@@ -6,14 +6,21 @@ class CarouselImages extends StatelessWidget {
     super.key,
     required this.images,
     this.onPageChanged,
+    this.autoPlay = true,
+    this.enableInfiniteScroll = true,
+    this.carouselController,
   });
 
   final List<String> images;
+  final bool autoPlay;
+  final bool enableInfiniteScroll;
+  final CarouselSliderController? carouselController;
   final Function(int, CarouselPageChangedReason)? onPageChanged;
 
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
+      carouselController: carouselController,
       items: List.generate(
         images.length,
             (index) {
@@ -26,11 +33,13 @@ class CarouselImages extends StatelessWidget {
         },
       ),
       options: CarouselOptions(
-        autoPlay: true,
+        autoPlay: autoPlay,
+        enableInfiniteScroll: enableInfiniteScroll,
         enlargeCenterPage: false,
         viewportFraction: 1,
         height: double.maxFinite,
         onPageChanged: onPageChanged,
+        initialPage: 0,
       ),
     );
   }
